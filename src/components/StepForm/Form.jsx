@@ -14,6 +14,14 @@ import ImageData from './ImageData';
 import ElevatorData from './ElevatorData';
 import ResumeData from './ResumeData';
 
+let custom = {
+  enterRight: '',
+  enterLeft : '',
+  exitRight : '',
+  exitLeft  : '',
+  intro     : ''
+}
+
 function Form() {
   return (
     <div className="card">
@@ -24,7 +32,7 @@ function Form() {
         <Step label="Children Step 3" />
       </Stepper>
       <form>
-        <StepWizard isHashEnabled>
+        <StepWizard isHashEnabled transitions={custom}>
           <PersonalData hashKey="informacion-personal" />
           <EmailData hashKey="email" />
           <DepartmentData hashKey="departamento" />
