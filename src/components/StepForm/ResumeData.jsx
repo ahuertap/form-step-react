@@ -1,10 +1,9 @@
 import React from 'react';
-
-import Form from './Form';
+import { Link } from 'react-router-dom';
 
 function ResumeData() {
   return (
-    <Form>
+    <>
       <div className="mb-3 row">
         <label className="col-md-3 col-form-label">Nombre:</label>
         <div className="col-md-9">
@@ -53,7 +52,11 @@ function ResumeData() {
           <input type="text" className="form-control form-control-plaintext" id="staticElevator" name="staticElevator" />
         </div>
       </div>
-    </Form>
+      <div className="d-flex justify-content-between">
+        <Link to="/register/department-elevator" className="btn btn-sm btn-primary">Anterior</Link>
+        <button type="button" className="btn btn-sm btn-primary">Enviar</button>
+      </div>
+    </>
   )
 }
 
