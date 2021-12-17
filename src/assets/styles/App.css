@@ -1,3 +1,7 @@
+:root {
+  --primary: #6610f2;
+}
+
 body {
   background-image: url(../images/department.jpg);
 }
@@ -6,4 +10,24 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:focus {
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
