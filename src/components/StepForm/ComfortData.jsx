@@ -1,11 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import Form from './Form';
-
-function ComfortData() {
+function ComfortData(props) {
   return (
-    <Form>
+    <>
       <div className="mb-3">
         <label className="form-label">¿El departamento cuenta con algunas de las siguientes comodidades?:</label>
         <div className="form-check">
@@ -22,10 +19,10 @@ function ComfortData() {
         </div>
       </div>
       <div className="d-flex justify-content-between">
-        <Link to="/register/department-floor" className="btn btn-sm btn-primary">Anterior</Link>
-        <Link to="/register/department-parking" className="btn btn-sm btn-primary">Siguiente</Link>
+        <button className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
+        <button className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
       </div>
-    </Form>
+    </>
   )
 }
 

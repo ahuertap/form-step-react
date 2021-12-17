@@ -1,20 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import Form from './Form';
-
-function FloorData() {
+function FloorData(props) {
   return (
-    <Form>
+    <>
       <div className="form-group mb-3">
         <label className="form-label">¿En qué piso se encuentra el departmento?:</label>
         <input type="number" className="form-control form-control-sm" id="txtFloor" name="txtFloor" max="50" required />
       </div>
       <div className="d-flex justify-content-between">
-        <Link to="/register/department-info" className="btn btn-sm btn-primary">Anterior</Link>
-        <Link to="/register/department-comfort" className="btn btn-sm btn-primary">Siguiente</Link>
+        <button className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
+        <button className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
       </div>
-    </Form>
+    </>
   )
 }
 
