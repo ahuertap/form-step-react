@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Form from './Form';
+
 function ResumeData() {
   return (
-    <>
+    <Form>
       <div className="mb-3 row">
         <label className="col-md-3 col-form-label">Nombre:</label>
         <div className="col-md-9">
@@ -56,7 +58,7 @@ function ResumeData() {
         <Link to="/register/department-elevator" className="btn btn-sm btn-primary">Anterior</Link>
         <button type="button" className="btn btn-sm btn-primary">Enviar</button>
       </div>
-    </>
+    </Form>
   )
 }
 
