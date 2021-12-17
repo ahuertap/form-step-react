@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Form from './Form';
 
@@ -19,6 +20,10 @@ function ParkingData() {
           <option value="Si">Si</option>
           <option value="No">No</option>
         </select>
+      </div>
+      <div className="d-flex justify-content-between">
+        <Link to="/register/department-comfort" className="btn btn-sm btn-primary">Anterior</Link>
+        <Link to="/register/department-price" className="btn btn-sm btn-primary">Siguiente</Link>
       </div>
     </Form>
   )
