@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Layout from '../components/Layout';
-import Form from '../components/StepForm/Form';
 import Home from '../components/Home';
 import PersonalData from '../components/StepForm/PersonalData';
 import EmailData from '../components/StepForm/EmailData';
@@ -19,7 +18,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Layout>
-        <Form>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register/personal-information" element={<PersonalData />} />
@@ -33,7 +31,6 @@ const App = () => {
             <Route path="/register/department-elevator" element={<ElevatorData />} />
             <Route path="/register/resume" element={<ResumeData />} />
           </Routes>
-        </Form>
       </Layout>
     </BrowserRouter>
   )
