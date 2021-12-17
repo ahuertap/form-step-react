@@ -20,16 +20,16 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="register/personal-information" element={<PersonalData />} />
-          <Route path="register/personal-email" element={<EmailData />} />
-          <Route path="register/department-info" element={<DepartmentData />} />
-          <Route path="register/department-floor" element={<FloorData />} />
-          <Route path="register/department-comfort" element={<ComfortData />} />
-          <Route path="register/department-parking" element={<ParkingData />} />
-          <Route path="register/department-price" element={<PriceData />} />
-          <Route path="register/department-image" element={<ImageData />} />
-          <Route path="register/department-elevator" element={<ElevatorData />} />
-          <Route path="register/resume" element={<ResumeData />} />
+          <Route path="/register/personal-information" element={<PersonalData />} />
+          <Route path="/register/personal-email" element={<EmailData />} />
+          <Route path="/register/department-info" element={<DepartmentData />} />
+          <Route path="/register/department-floor" element={<FloorData />} />
+          <Route path="/register/department-comfort" element={<ComfortData />} />
+          <Route path="/register/department-parking" element={<ParkingData />} />
+          <Route path="/register/department-price" element={<PriceData />} />
+          <Route path="/register/department-image" element={<ImageData />} />
+          <Route path="/register/department-elevator" element={<ElevatorData />} />
+          <Route path="/register/resume" element={<ResumeData />} />
         </Routes>
       </Layout>
     </BrowserRouter>
