@@ -1,0 +1,76 @@
+{
+  "form": [
+    {
+      "order": 1,
+      "component": "PersonalData",
+      "path": "./PersonalData",
+      "description": "Nombre Completo",
+      "label": "Nombre Completo:",
+      "name": ["txtName"]
+    },
+    {
+      "order": 2,
+      "component": "EmailData",
+      "path": "./EmailData",
+      "description": "Email",
+      "label": "Email:",
+      "name": ["txtEmail"]
+    },
+    {
+      "order": 3,
+      "component": "DepartmentData",
+      "path": "./DepartmentData",
+      "description": "Departamento",
+      "label": "Dirección del apartamento:",
+      "name": ["txtAddress"]
+    },
+    {
+      "order": 4,
+      "component": "FloorData",
+      "path": "./FloorData",
+      "description": "Piso",
+      "label": "¿En qué piso se encuentra el departamento?:",
+      "name": ["txtFloor"]
+    },
+    {
+      "order": 5,
+      "component": "ComfortData",
+      "path": "./ComfortData",
+      "description": "Comodidades",
+      "label": "¿El departamento cuenta con algunas de las siguientes comodidades?:",
+      "name": ["chkBBQ", "chkSalon", "chkGames"]
+    },
+    {
+      "order": 6,
+      "component": "ParkingData",
+      "path": "./ParkingData",
+      "description": "Estacionamiento",
+      "label": "¿El departamento tiene parqueadero?:",
+      "name": ["txtParking"]
+    },
+    {
+      "order": 7,
+      "component": "PriceData",
+      "path": "./PriceData",
+      "description": "Precio",
+      "label": "Ingresa el monto por el cual quieres vender el departamento:",
+      "name": ["txtPrice"]
+    },
+    {
+      "order": 8,
+      "component": "ImageData",
+      "path": "./ImageData",
+      "description": "Foto Departamento",
+      "label": "Sube una imagen de tu apartamento:",
+      "name": "txtPicture"
+    },
+    {
+      "order": 9,
+      "component": "ElevatorData",
+      "path": "./ElevatorData",
+      "description": "Elevador",
+      "label": "¿El departamento tiene ascensor?:",
+      "name": "txtElevator"
+    }
+  ]
+}
