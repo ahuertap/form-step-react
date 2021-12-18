@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Stepper, Step } from 'react-form-stepper';
 import StepWizard from "react-step-wizard";
 
+import NavStep from './NavStep';
 import PersonalData from './PersonalData';
 import EmailData from './EmailData';
 import DepartmentData from './DepartmentData';
@@ -26,13 +26,8 @@ function Form() {
   return (
     <div className="card">
       <div className="card-body">
-      <Stepper activeStep={1}>
-        <Step label="Children Step 1" />
-        <Step label="Children Step 2" />
-        <Step label="Children Step 3" />
-      </Stepper>
       <form>
-        <StepWizard isHashEnabled transitions={custom}>
+        <StepWizard isHashEnabled transitions={custom} nav={<NavStep />}>
           <PersonalData hashKey="informacion-personal" />
           <EmailData hashKey="email" />
           <DepartmentData hashKey="departamento" />
