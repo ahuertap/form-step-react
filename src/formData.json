@@ -62,7 +62,7 @@
       "path": "./ImageData",
       "description": "Foto Departamento",
       "label": "Sube una imagen de tu apartamento:",
-      "name": "txtPicture"
+      "name": ["txtPicture"]
     },
     {
       "order": 9,
@@ -70,7 +70,7 @@
       "path": "./ElevatorData",
       "description": "Elevador",
       "label": "¿El departamento tiene ascensor?:",
-      "name": "txtElevator"
+      "name": ["txtElevator"]
     }
   ]
 }
