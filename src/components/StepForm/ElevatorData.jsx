@@ -11,8 +11,8 @@ function ElevatorData(props) {
         </select>
       </div>
       <div className="d-flex justify-content-between">
-        <button className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
-        <button className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
+        <button type="button" className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
+        <button type="button" className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
       </div>
     </>
   )

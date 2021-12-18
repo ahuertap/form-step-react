@@ -5,11 +5,11 @@ function FloorData(props) {
     <>
       <div className="form-group mb-3">
         <label className="form-label">¿En qué piso se encuentra el departmento?:</label>
-        <input type="number" className="form-control form-control-sm" id="txtFloor" name="txtFloor" max="50" required />
+        <input type="number" className="form-control form-control-sm" id="txtFloor" name="txtFloor" max="50"  />
       </div>
       <div className="d-flex justify-content-between">
-        <button className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
-        <button className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
+        <button type="button" className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
+        <button type="button" className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
       </div>
     </>
   )

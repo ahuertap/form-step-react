@@ -5,11 +5,11 @@ function EmailData(props) {
     <>
       <div className="form-group mb-3">
         <label className="form-label">Email:</label>
-        <input type="email" className="form-control form-control-sm" id="txtEmail" name="txtEmail" required/>
+        <input type="email" className="form-control form-control-sm" id="txtEmail" name="txtEmail" />
       </div>
       <div className="d-flex justify-content-between">
-        <button className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
-        <button className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
+        <button type="button" className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
+        <button type="button" className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
       </div>
     </>
   )

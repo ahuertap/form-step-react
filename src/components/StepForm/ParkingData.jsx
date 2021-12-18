@@ -5,7 +5,7 @@ function ParkingData(props) {
     <>
       <div className="form-group mb-3">
         <label className="form-label">¿El departamento tiene parqueadero?:</label>
-        <select className="form-control" id="sltParking" name="sltParking" required>
+        <select className="form-control" id="sltParking" name="sltParking" >
           <option value="">Seleccione una opción...</option>
           <option value="Si">Si</option>
           <option value="No">No</option>
@@ -19,8 +19,8 @@ function ParkingData(props) {
         </select>
       </div>
       <div className="d-flex justify-content-between">
-        <button className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
-        <button className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
+        <button type="button" className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
+        <button type="button" className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
       </div>
     </>
   )
