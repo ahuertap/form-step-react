@@ -5,6 +5,7 @@
       "component": "PersonalData",
       "path": "./PersonalData",
       "description": "Nombre Completo",
+      "hash": "nombre-usuario",
       "label": "Nombre Completo:",
       "name": ["txtName"]
     },
@@ -13,6 +14,7 @@
       "component": "EmailData",
       "path": "./EmailData",
       "description": "Email",
+      "hash": "email-usuario",
       "label": "Email:",
       "name": ["txtEmail"]
     },
@@ -21,6 +23,7 @@
       "component": "DepartmentData",
       "path": "./DepartmentData",
       "description": "Departamento",
+      "hash": "direccion-departamento",
       "label": "Dirección del apartamento:",
       "name": ["txtAddress"]
     },
@@ -29,6 +32,7 @@
       "component": "FloorData",
       "path": "./FloorData",
       "description": "Piso",
+      "hash": "piso-departamento",
       "label": "¿En qué piso se encuentra el departamento?:",
       "name": ["txtFloor"]
     },
@@ -37,6 +41,7 @@
       "component": "ComfortData",
       "path": "./ComfortData",
       "description": "Comodidades",
+      "hash": "comodidades-departamento",
       "label": "¿El departamento cuenta con algunas de las siguientes comodidades?:",
       "name": ["chkBBQ", "chkSalon", "chkGames"]
     },
@@ -45,6 +50,7 @@
       "component": "ParkingData",
       "path": "./ParkingData",
       "description": "Estacionamiento",
+      "hash": "estacionamiento-departamento",
       "label": "¿El departamento tiene parqueadero?:",
       "name": ["txtParking"]
     },
@@ -53,6 +59,7 @@
       "component": "PriceData",
       "path": "./PriceData",
       "description": "Precio",
+      "hash": "precio-departamento",
       "label": "Ingresa el monto por el cual quieres vender el departamento:",
       "name": ["txtPrice"]
     },
@@ -61,6 +68,7 @@
       "component": "ImageData",
       "path": "./ImageData",
       "description": "Foto Departamento",
+      "hash": "foto-departamento",
       "label": "Sube una imagen de tu apartamento:",
       "name": ["txtPicture"]
     },
@@ -69,6 +77,7 @@
       "component": "ElevatorData",
       "path": "./ElevatorData",
       "description": "Elevador",
+      "hash": "elevador-departamento",
       "label": "¿El departamento tiene ascensor?:",
       "name": ["txtElevator"]
     }
