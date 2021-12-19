@@ -4,23 +4,21 @@ import StepWizard from "react-step-wizard";
 import NavStep from './NavStep';
 import render from './components';
 
+import transitions from '../../utils/transitions';
 import data from '../../formData.json';
 
-let custom = {
-  enterRight: '',
-  enterLeft : '',
-  exitRight : '',
-  exitLeft  : '',
-  intro     : ''
-}
 
 function Form() {
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
 
   return (
     <div className="card">
       <div className="card-body">
-      <form>
-        <StepWizard isHashEnabled transitions={custom} nav={<NavStep />}>
+      <form onSubmit={handleSubmit}>
+        <StepWizard isHashEnabled transitions={transitions} nav={<NavStep />}>
         {
           data.form.map(blocks => render(blocks))
         }
