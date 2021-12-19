@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { navigateForward, navigateBackward } from '../../utils/navigate';
+
 function PriceData(props) {
 
   function render() {
@@ -21,8 +23,8 @@ function PriceData(props) {
       <label className="form-label">{ props.label }</label>
       { render() }
       <div className="d-flex justify-content-between">
-        <button type="button" className="btn btn-sm btn-primary" onClick={ props.previousStep }>Anterior</button>
-        <button type="button" className="btn btn-sm btn-primary" onClick={ props.nextStep }>Next</button>
+      { navigateBackward(props) }
+      { navigateForward(props) }
       </div>
     </>
   )
