@@ -15,3 +15,11 @@ export function navigateForward(props) {
 
   return <button type="button" className="btn btn-sm btn-primary">Enviar</button>;
 }
+
+export function navigateClass(props) {
+  if (props.currentStep !== 1) {
+    return 'd-flex justify-content-between';
+  }
+
+  return 'd-flex justify-content-end'
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { navigateForward, navigateBackward } from '../../utils/navigate';
+import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
 
 function ParkingData(props) {
 
@@ -32,7 +32,7 @@ function ParkingData(props) {
           <option value="Si">Si</option>
         </select>
       </div>
-      <div className="d-flex justify-content-between">
+      <div className={navigateClass(props)}>
       { navigateBackward(props) }
       { navigateForward(props) }
       </div>

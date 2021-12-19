@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { navigateForward, navigateBackward } from '../../utils/navigate';
+import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
 
 function PersonalData(props) {
 
@@ -23,7 +23,7 @@ function PersonalData(props) {
           render()
         }
       </div>
-      <div className="d-flex justify-content-between">
+      <div className={navigateClass(props)}>
         { navigateBackward(props) }
         { navigateForward(props) }
       </div>

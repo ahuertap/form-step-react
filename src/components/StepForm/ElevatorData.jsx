@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { navigateForward, navigateBackward } from '../../utils/navigate';
+import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
 
 function ElevatorData(props) {
 
@@ -25,7 +25,7 @@ function ElevatorData(props) {
         <label className="form-label">{ props.label }</label>
         { render() }
       </div>
-      <div className="d-flex justify-content-between">
+      <div className={navigateClass(props)}>
       { navigateBackward(props) }
       { navigateForward(props) }
       </div>
