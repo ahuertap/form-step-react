@@ -14,13 +14,15 @@ function Form() {
     event.preventDefault();
   }
 
+  const sortedData = data.form.sort((a, b) => a.order - b.order);
+
   return (
     <div className="card">
       <div className="card-body">
       <form onSubmit={handleSubmit}>
         <StepWizard isHashEnabled transitions={transitions} nav={<NavStep dataInfo={data.form}/>}>
         {
-          data.form.map(blocks => render(blocks))
+          sortedData.map(blocks => render(blocks))
         }
         </StepWizard>
       </form>
