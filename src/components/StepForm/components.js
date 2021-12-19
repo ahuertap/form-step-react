@@ -9,7 +9,6 @@ import ParkingData from './ParkingData';
 import PriceData from './PriceData';
 import ImageData from './ImageData';
 import ElevatorData from './ElevatorData';
-import ResumeData from './ResumeData';
 
 const components = {
   PersonalData: PersonalData,
