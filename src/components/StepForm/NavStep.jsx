@@ -16,7 +16,7 @@ function NavStep(props) {
 
     for (let i = 1; i <= props.totalSteps; i++) {
       steps.push(
-          <Step key={i} />
+          <Step key={i} label={props.dataInfo[i-1].description}/>
       );
     }
     return steps;

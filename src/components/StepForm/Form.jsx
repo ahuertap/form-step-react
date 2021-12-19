@@ -18,7 +18,7 @@ function Form() {
     <div className="card">
       <div className="card-body">
       <form onSubmit={handleSubmit}>
-        <StepWizard isHashEnabled transitions={transitions} nav={<NavStep />}>
+        <StepWizard isHashEnabled transitions={transitions} nav={<NavStep dataInfo={data.form}/>}>
         {
           data.form.map(blocks => render(blocks))
         }

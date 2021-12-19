@@ -67,7 +67,7 @@
       "order": 8,
       "component": "ImageData",
       "path": "./ImageData",
-      "description": "Foto Departamento",
+      "description": "Foto",
       "hash": "foto-departamento",
       "label": "Sube una imagen de tu apartamento:",
       "name": ["txtPicture"]
