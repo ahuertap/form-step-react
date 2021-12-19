@@ -28,6 +28,7 @@ function render(data) {
     {
       key: data.order,
       hashKey: data.hash,
+      ...data,
     }
   );
 }
