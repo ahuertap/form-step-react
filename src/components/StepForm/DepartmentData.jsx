@@ -22,6 +22,7 @@ function DepartmentData(props) {
           id={props.name[key]}
           name={props.name[key]}
           onChange={handleInput}
+          value={props.department || ''}
         />
       );
     }
@@ -42,9 +43,15 @@ function DepartmentData(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    department: state.department,
+  };
+};
+
 const mapDispatchToProps = {
   setDepartment,
 };
 
-export default connect(null, mapDispatchToProps)(DepartmentData)
+export default connect(mapStateToProps, mapDispatchToProps)(DepartmentData)
 

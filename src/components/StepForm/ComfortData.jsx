@@ -21,9 +21,19 @@ function ComfortData(props) {
     for (let key in props.name) {
       const options = ['Zona BBQ', 'Salón comunal', 'Parque de juegos'];
 
+      const isChecked = props.comfort.includes(options[key]);
+
       elements.push(
         <div key={key} className="form-check">
-          <input className="form-check-input" type="checkbox" id={props.name[key]} name={props.name[key]} onChange={(event) => handleInput(event, options[key]) } value={options[key]} />
+          <input
+            className="form-check-input"
+            type="checkbox"
+            id={props.name[key]}
+            name={props.name[key]}
+            onChange={(event) => handleInput(event, options[key]) }
+            value={options[key]}
+            checked={isChecked}
+          />
           <label className="form-check-label" htmlFor={props.name[key]}>{options[key]}</label>
         </div>
       );
@@ -45,9 +55,15 @@ function ComfortData(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    comfort: state.comfort,
+  };
+};
+
 const mapDispatchToProps = {
   setComfort,
   deleteComfort,
 };
 
-export default connect(null, mapDispatchToProps)(ComfortData)
+export default connect(mapStateToProps, mapDispatchToProps)(ComfortData)

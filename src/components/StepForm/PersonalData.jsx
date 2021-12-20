@@ -22,6 +22,7 @@ function PersonalData(props) {
           id={props.name[key]}
           name={props.name[key]}
           onChange={handleInput}
+          value={props.nameState || ''}
         />
       );
     }
@@ -44,8 +45,14 @@ function PersonalData(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    nameState: state.nameState,
+  };
+};
+
 const mapDispatchToProps = {
   setName,
 };
 
-export default connect(null, mapDispatchToProps)(PersonalData)
+export default connect(mapStateToProps, mapDispatchToProps)(PersonalData)

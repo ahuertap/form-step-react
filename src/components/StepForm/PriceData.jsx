@@ -23,6 +23,7 @@ function PriceData(props) {
           id={props.name[key]}
           name={props.name[key]}
           onChange={handleInput}
+          value={props.price || ''}
         />
       </div>
       );
@@ -42,9 +43,15 @@ function PriceData(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    price: state.price,
+  };
+};
+
 const mapDispatchToProps = {
   setPrice,
 };
 
-export default connect(null, mapDispatchToProps)(PriceData)
+export default connect(mapStateToProps, mapDispatchToProps)(PriceData)
 

@@ -15,7 +15,7 @@ function ElevatorData(props) {
 
     for (let key in props.name) {
       elements.push(
-        <select key={key} className="form-control" id={props.name[key]} name={props.name[key]} onChange={handleInput} >
+        <select key={key} className="form-control" id={props.name[key]} name={props.name[key]} onChange={handleInput} value={props.elevator || ''} >
           <option value="">Seleccione una opción...</option>
           <option value="No">No</option>
           <option value="Si">Si</option>
@@ -39,8 +39,14 @@ function ElevatorData(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    elevator: state.elevator,
+  };
+};
+
 const mapDispatchToProps = {
   setElevator,
 };
 
-export default connect(null, mapDispatchToProps)(ElevatorData)
+export default connect(mapStateToProps, mapDispatchToProps)(ElevatorData)

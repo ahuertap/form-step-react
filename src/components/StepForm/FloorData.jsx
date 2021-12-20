@@ -23,6 +23,7 @@ function FloorData(props) {
           name={props.name[key]}
           max="50"
           onChange={handleInput}
+          value={props.floor || ''}
         />
       );
     }
@@ -43,9 +44,15 @@ function FloorData(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    floor: state.floor,
+  };
+};
+
 const mapDispatchToProps = {
   setFloor,
 };
 
-export default connect(null, mapDispatchToProps)(FloorData)
+export default connect(mapStateToProps, mapDispatchToProps)(FloorData)
 

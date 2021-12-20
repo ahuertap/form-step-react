@@ -22,6 +22,7 @@ function EmailData(props) {
           id={props.name[key]}
           name={props.name[key]}
           onChange={handleInput}
+          value={props.email || ''}
         />
       );
     }
@@ -42,8 +43,14 @@ function EmailData(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    email: state.email,
+  };
+};
+
 const mapDispatchToProps = {
   setEmail,
 };
 
-export default connect(null, mapDispatchToProps)(EmailData);
+export default connect(mapStateToProps, mapDispatchToProps)(EmailData);

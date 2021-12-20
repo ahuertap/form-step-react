@@ -22,6 +22,7 @@ function ImageData(props) {
           id={props.name[key]}
           name={props.name[key]}
           onChange={handleInput}
+          filename={props.image || ''}
         />
       );
     }
@@ -42,8 +43,14 @@ function ImageData(props) {
   )
 }
 
+const mapStateToProps = (state) => {
+  return {
+    image: state.image,
+  };
+};
+
 const mapDispatchToProps = {
   setImage,
 };
 
-export default connect(null, mapDispatchToProps)(ImageData)
+export default connect(mapStateToProps, mapDispatchToProps)(ImageData)
