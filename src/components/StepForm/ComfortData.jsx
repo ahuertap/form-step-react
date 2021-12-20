@@ -1,8 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
+import { setComfort, deleteComfort } from '../../actions';
 
 function ComfortData(props) {
+
+  function handleInput(event, name) {
+    console.log(name)
+    if (event.target.checked) {
+      props.setComfort(event.target.value);
+    } else {
+      props.deleteComfort(name);
+    }
+  }
 
   function render() {
     const elements = [];
@@ -12,8 +23,8 @@ function ComfortData(props) {
 
       elements.push(
         <div key={key} className="form-check">
-          <input className="form-check-input" type="checkbox" id={props.name[key]} name={props.name[key]} />
-          <label className="form-check-label" htmlFor="chkBBQ">{options[key]}</label>
+          <input className="form-check-input" type="checkbox" id={props.name[key]} name={props.name[key]} onChange={(event) => handleInput(event, options[key]) } value={options[key]} />
+          <label className="form-check-label" htmlFor={props.name[key]}>{options[key]}</label>
         </div>
       );
     }
@@ -34,4 +45,9 @@ function ComfortData(props) {
   )
 }
 
-export default ComfortData;
+const mapDispatchToProps = {
+  setComfort,
+  deleteComfort,
+};
+
+export default connect(null, mapDispatchToProps)(ComfortData)

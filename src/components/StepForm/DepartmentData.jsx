@@ -1,15 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
+import { setDepartment } from '../../actions';
 
 function DepartmentData(props) {
+
+  function handleInput(event) {
+    props.setDepartment(event.target.value);
+  }
 
   function render() {
     const elements = [];
 
     for (let key in props.name) {
       elements.push(
-        <input key={key} type="text" className="form-control form-control-sm" id={props.name[key]} name={props.name[key]} />
+        <input
+          key={key}
+          type="text"
+          className="form-control form-control-sm"
+          id={props.name[key]}
+          name={props.name[key]}
+          onChange={handleInput}
+        />
       );
     }
     return elements;
@@ -29,4 +42,9 @@ function DepartmentData(props) {
   )
 }
 
-export default DepartmentData;
+const mapDispatchToProps = {
+  setDepartment,
+};
+
+export default connect(null, mapDispatchToProps)(DepartmentData)
+

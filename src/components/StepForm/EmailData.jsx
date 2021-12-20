@@ -1,15 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
+import { setEmail } from '../../actions';
 
 function EmailData(props) {
+
+  function handleInput(event) {
+    props.setEmail(event.target.value);
+  }
 
   function render() {
     const elements = [];
 
     for (let key in props.name) {
       elements.push(
-        <input key={key} type="email" className="form-control form-control-sm" id={props.name[key]} name={props.name[key]} />
+        <input
+          key={key}
+          type="email"
+          className="form-control form-control-sm"
+          id={props.name[key]}
+          name={props.name[key]}
+          onChange={handleInput}
+        />
       );
     }
     return elements;
@@ -29,4 +42,8 @@ function EmailData(props) {
   )
 }
 
-export default EmailData;
+const mapDispatchToProps = {
+  setEmail,
+};
+
+export default connect(null, mapDispatchToProps)(EmailData);

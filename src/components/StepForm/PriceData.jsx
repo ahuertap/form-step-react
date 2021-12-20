@@ -1,8 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
+import { setPrice } from '../../actions';
 
 function PriceData(props) {
+
+  function handleInput(event) {
+    props.setPrice(event.target.value);
+  }
 
   function render() {
     const elements = [];
@@ -11,7 +17,13 @@ function PriceData(props) {
       elements.push(
       <div key={key} className="input-group mb-3">
         <span className="input-group-text">$</span>
-        <input type="text" className="form-control form-control-sm" id={props.name[key]} name={props.name[key]} />
+        <input
+          type="text"
+          className="form-control form-control-sm"
+          id={props.name[key]}
+          name={props.name[key]}
+          onChange={handleInput}
+        />
       </div>
       );
     }
@@ -30,4 +42,9 @@ function PriceData(props) {
   )
 }
 
-export default PriceData;
+const mapDispatchToProps = {
+  setPrice,
+};
+
+export default connect(null, mapDispatchToProps)(PriceData)
+

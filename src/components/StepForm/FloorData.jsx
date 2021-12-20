@@ -1,15 +1,29 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
+import { setFloor } from '../../actions';
 
 function FloorData(props) {
+
+  function handleInput(event) {
+    props.setFloor(event.target.value);
+  }
 
   function render() {
     const elements = [];
 
     for (let key in props.name) {
       elements.push(
-        <input key={key} type="number" className="form-control form-control-sm" id={props.name[key]} name={props.name[key]} max="50" />
+        <input
+          key={key}
+          type="number"
+          className="form-control form-control-sm"
+          id={props.name[key]}
+          name={props.name[key]}
+          max="50"
+          onChange={handleInput}
+        />
       );
     }
     return elements;
@@ -29,4 +43,9 @@ function FloorData(props) {
   )
 }
 
-export default FloorData
+const mapDispatchToProps = {
+  setFloor,
+};
+
+export default connect(null, mapDispatchToProps)(FloorData)
+

@@ -1,15 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
+import { setImage } from '../../actions';
 
 function ImageData(props) {
+
+  function handleInput(event) {
+    props.setImage(event.target.value);
+  }
 
   function render() {
     const elements = [];
 
     for (let key in props.name) {
       elements.push(
-        <input key={key} type="file" className="form-control form-control-sm" id={props.name[key]} name={props.name[key]} />
+        <input
+          key={key}
+          type="file"
+          className="form-control form-control-sm"
+          id={props.name[key]}
+          name={props.name[key]}
+          onChange={handleInput}
+        />
       );
     }
     return elements;
@@ -29,4 +42,8 @@ function ImageData(props) {
   )
 }
 
-export default ImageData
+const mapDispatchToProps = {
+  setImage,
+};
+
+export default connect(null, mapDispatchToProps)(ImageData)

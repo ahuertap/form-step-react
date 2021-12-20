@@ -1,15 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { navigateForward, navigateBackward, navigateClass } from '../../utils/navigate';
+import { setParking } from '../../actions';
 
 function ParkingData(props) {
+
+  function handleInput(event) {
+    props.setParking(event.target.value);
+  }
 
   function render() {
     const elements = [];
 
     for (let key in props.name) {
       elements.push(
-        <select key={key} className="form-control" id={props.name[key]} name={props.name[key]} >
+        <select key={key} className="form-control" id={props.name[key]} name={props.name[key]} onChange={handleInput} >
           <option value="">Seleccione una opción...</option>
           <option value="No">No</option>
           <option value="Si">Si</option>
@@ -40,4 +46,8 @@ function ParkingData(props) {
   )
 }
 
-export default ParkingData;
+const mapDispatchToProps = {
+  setParking,
+};
+
+export default connect(null, mapDispatchToProps)(ParkingData)
