@@ -1,13 +1,13 @@
 const initialState = {
-  name: null,
-  email: null,
-  department: null,
-  floor: null,
+  nameState: "",
+  email: "",
+  department: "",
+  floor: "",
   comfort: [],
-  parking: null,
-  price: null,
-  image: null,
-  elevator: null,
+  parking: "",
+  price: "",
+  image: "",
+  elevator: "",
 };
 
 const reducer = (state = initialState, action) => {
@@ -15,7 +15,7 @@ const reducer = (state = initialState, action) => {
     case 'SET_NAME':
       return {
         ...state,
-        name: action.payload,
+        nameState: action.payload,
       };
     case 'SET_EMAIL':
       return {
